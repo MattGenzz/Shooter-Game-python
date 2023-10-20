@@ -27,9 +27,9 @@ grenade_thrown = False
 
 #load images
 #bullet
-bullet_img = pygame.image.load('Shooter-Game-python/img/icons/bullet.png').convert_alpha()
+bullet_img = pygame.image.load('img/icons/bullet.png').convert_alpha()
 #grenade
-grenade_img = pygame.image.load('Shooter-Game-python/img/icons/grenade.png').convert_alpha()
+grenade_img = pygame.image.load('img/icons/grenade.png').convert_alpha()
 
 
 #define colours
@@ -70,9 +70,9 @@ class Soldier(pygame.sprite.Sprite):
 			#reset temporary list of images
 			temp_list = []
 			#count number of files in the folder
-			num_of_frames = len(os.listdir(f'Shooter-Game-python/img/{self.char_type}/{animation}'))
+			num_of_frames = len(os.listdir(f'img/{self.char_type}/{animation}'))
 			for i in range(num_of_frames):
-				img = pygame.image.load(f'Shooter-Game-python/img/{self.char_type}/{animation}/{i}.png').convert_alpha()
+				img = pygame.image.load(f'img/{self.char_type}/{animation}/{i}.png').convert_alpha()
 				img = pygame.transform.scale(img, (int(img.get_width() * scale), int(img.get_height() * scale)))
 				temp_list.append(img)
 			self.animation_list.append(temp_list)
